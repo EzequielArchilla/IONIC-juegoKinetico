@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="container">
+      <form [formGroup]="altaForm">
+      <div class="campo">
+        <span class="texto">Nombre</span>
+        <input type="text" class="inputText" formControlName="nombre" required>
+        <small
+        *ngIf="altaForm.get('nombre')?.hasError('required') && (altaForm.get('nombre')?.dirty || altaForm.get('nombre')?.touched)"
+        style="color: var(--ion-color-danger)">Por favor, ingrese el nombre.</small>
+      </div>
+      <div>
+        <span class="texto">Apellido</span>
+        <input type="text" class="inputText" formControlName="apellido" required>
+        <small
+        *ngIf="altaForm.get('apellido')?.hasError('required') && (altaForm.get('apellido')?.dirty || altaForm.get('apellido')?.touched)"
+        style="color: var(--ion-color-danger)"
+        [ngClass]="altaForm.get('apellido')?.hasError('required') && altaForm.get('apellido')?.touched ? 'visible' : 'hidden'">Por
+        favor, ingrese un apellido.</small>
+      </div>
+      <div>
+        <span class="texto">Correo electronico</span>
+        <input type="text" class="inputText" formControlName="email" required>
+        <small
+        *ngIf="altaForm.get('email')?.hasError('required') && altaForm.get('email')?.hasError('email') && (altaForm.get('email')?.dirty || altaForm.get('email')?.touched)"
+        style="color: var(--ion-color-danger)">Por favor, ingrese el correo electronico.</small>
+        <small  style="color: var(--ion-color-danger)"
+        *ngIf="altaForm.get('email')?.hasError('pattern') && altaForm.get('email')?.touched">El Correo no tiene el
+        formato correcto</small>
+      </div>
+      <div>
+        <span class="texto">Contraseña</span>
+        <input type="password" class="inputText" formControlName="password" required>
+        <small
+        *ngIf="altaForm.get('password')?.hasError('required') && (altaForm.get('password')?.dirty || altaForm.get('password')?.touched)"
+        style="color: var(--ion-color-danger)">Por favor, ingrese la clave.</small>
+      </div>    
+
+
+    <ion-row>
+      <ion-col> 
+      <ion-button class="bottom" [disabled]="!altaForm.valid" type="submit" color="tertiary" (click)="signUp()" expand="block">Aceptar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  </div>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ingreso</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content style="overflow:hidden">
+
+  <div class="container">
+<div>
+  <input type="text" class="inputText" placeholder="Correo electronico" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" required>
+</div>
+<div>
+  <input type="password" class="inputText" placeholder="Contraseña" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required>
+</div>
+
+  <ion-row style="overflow:hidden;height: 400px;">
+    <ion-col>
+      <ion-button class="bottom" type="submit" color="tertiary" expand="block" (click)="signIn()" expand="full" style="margin-top:5vh">Aceptar</ion-button>
+      <ion-fab class="flexContainer img1" style="position:relative">
+        <ion-fab-button color="primary" (click)="login(1)">
+          <img [class]="classImg1" src="../../assets/avatar1.png">
+        </ion-fab-button>
+        <ion-fab-button color="primary" (click)="login(2)">
+          <img [class]="classImg2" src="../../assets/avatar2.png">
+        </ion-fab-button>
+        <ion-fab-button color="primary" (click)="login(3)">
+          <img [class]="classImg3" src="../../assets/avatar3.png">
+        </ion-fab-button>
+      </ion-fab>
+    </ion-col>
+  </ion-row>
+  </div>
+</ion-content>

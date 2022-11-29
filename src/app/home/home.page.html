@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: 'center'">Administracion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-img class="icon" src="../../assets/icon/favicon.png"></ion-img>
+
+
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-button 
+        expand="full"
+        shape="block"
+        class="button-ingreso"
+        (click)="navigateTo('/ingreso')"
+        >Ingreso</ion-button
+      >
+      <ion-button 
+      expand="full"
+      shape="block"
+      class="button-ingreso"
+      (click)="navigateTo('/registro')"
+      >Registro</ion-button
+    >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

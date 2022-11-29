@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">juegoKinetico</string>
+    <string name="title_activity_main">juegoKinetico</string>
+    <string name="package_name">juego.kinetico</string>
+    <string name="custom_url_scheme">juego.kinetico</string>
+</resources>

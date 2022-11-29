@@ -1,0 +1,32 @@
+.imagenHeroe{
+    position: absolute;
+}
+
+.nombreHeroe{
+    position: absolute;
+    margin-left:1%;
+}
+
+ion-content{
+    --overflow:hidden;
+    --background: none;
+    background: url("../../assets/bg/Polygon\ Luminary.png");
+    background-size: cover;
+    background-position: center center;              
+  }
+  
+
+  ion-button {
+    --background: linear-gradient(#c12828, #a28080);
+  }
+
+    ion-row {
+      height: 10%;
+    }
+
+
+    ion-grid {
+        --ion-grid-column-padding: 20px;
+      
+      }
+      

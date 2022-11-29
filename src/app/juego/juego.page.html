@@ -1,0 +1,20 @@
+<ion-header *ngIf="this.iniciado == false">
+  <ion-toolbar>
+    <ion-button (click)="cerrarSesion()" slot="end">Salir</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button *ngIf="this.iniciado == false" (click)="iniciarJuego()" class="buttNext" color="success">
+    <span  class="fullButt">Iniciar</span>
+  </ion-button>
+  <ion-list *ngIf="this.iniciado == false" [inset]="true">
+    <ion-title *ngIf="this.listaPuntajes.length == 0">No hay puntajes cargados</ion-title>
+    <ion-item *ngFor="let puntaje of listaPuntajes">
+      <ion-label>{{puntaje.usuario.nombre}} {{puntaje.usuario.apellido}} - {{puntaje.puntaje}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+<img *ngIf="this.iniciado == true" [style]="estilo" [src]="imagenHeroe" alt="favi">
+<div style="width:100vw"><h3 *ngIf="this.iniciado == true" class="center">{{timer}}</h3></div>
+</ion-content>

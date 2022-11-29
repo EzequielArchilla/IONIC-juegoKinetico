@@ -1,0 +1,42 @@
+img{
+    height: 7vh;
+    width: 15vw;
+    display: block;
+}
+
+ion-content{
+    width: 100vmin;
+    height: 100vmin;
+}
+
+.buttNext{
+    text-align: center;
+    padding: 5%;
+    height:40%;
+    width:100vw;
+    opacity:1;
+   }
+  
+  .fullButt{
+    display: block;
+    background: none;
+    font-size:30px;
+    color:white;
+   }
+
+   ion-content{
+    --overflow:hidden;
+    --background: none;
+    background: url("../../assets/bg/Shiny\ Overlay.png");
+    background-size: cover;
+    background-position: center center;              
+  }
+
+  .center {
+    position:absolute;
+    top:5%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
